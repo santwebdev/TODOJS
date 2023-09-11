@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo app JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+</head>
+<body>
+    <div id="navBaar">
+        <div id="ToDo">
+            <span id="task"style="font-weight: 800; color: whitesmoke;">Tasks</span> List
+        </div>
+        <div id="addButton" onclick="addBtn()">
+            <i class="fas fa-plus-circle color-blue"></i>
+            <span id="addButtonText"></span>
+        </div>
+        <div class="addlists">Add Lists</div>              
+    </div> 
+    <div id = "noItem">
+        <h2>No items in the todo list</h2>
+    </div>
+    <div id="backButton">
+        <i id="backLogo" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>
+        Back
+    </div>
+
+    <div id="cardHead">abc</div>
+    
+    <div id="mainDiv">
+        <div id="innerDiv">
+            <span class="text textContent">Add New List</span>
+            <input id="modal-input-box" class="input-box textContent" type="text" placeholder=""> <br>
+            <button id= "addBtn" class="buttonTextContent textContent" onclick="addList()">Add</button>
+            <button id="closeBtn" class="buttonTextContent textContent" onclick="closeList()">Close</button>
+        </div>
+    </div>
+
+    <div id="mainDivContainer">
+        <div id="innerDivContainer">
+            <span class="text textContent">Add New Item</span>
+            <input id="modal-input-box-card" class="input-box textContent" type="text" placeholder=""> <br>
+            
+            <button id= "addBtn" class="buttonTextContent textContent" onclick="addItemList()">Add</button>
+            <button id="closeBtn" class="buttonTextContent textContent" onclick="closeItemList()">Close</button>
+        </div>
+    </div>
+    
+    <div style="display: none;" class="this-list-element">
+        <button class="in-list-button" value="" onclick="completedTask(this)">mark as done</button>
+    </div>
+
+    <div id="addPopUpCard">
+
+    </div>
+         
+    <div id="mainContainer">
+        <div class="cardContainer">
+            <div class="wrapContainer">
+            <option class="cardHeader" onclick="navBaarFunc(this.value)"></option>
+            <br><hr><div class="add-list-after-this"></div>
+            <br>
+            <div class="buttonCard">
+                <button class="fas fa-trash deleteButtonCard"></button>    
+                <button class="fas fa-plus-circle addButtonCard"></button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+

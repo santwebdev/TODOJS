@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+#navBaar {
+  display: flex;
+  font-size: 40px;
+  margin: 5% 0 0 10%;
+}
+
+#addButton {
+  z-index: 1;
+  position: absolute;
+  left: 80%;
+  cursor: pointer;
+  color: rgb(99, 223, 139);
+}
+#noItem{
+  font-size: 20px;
+  margin-top: 60px;
+  margin-left: 150px;
+}
+.addlists {
+  z-index: 1;
+  position: absolute;
+  left: 84%;
+  cursor: pointer;
+  color: white;
+}
+
+.color-red {
+  color: red;
+}
+
+#mainDiv {
+  display: none;
+  position: fixed;
+  padding: 20% 0 0 30%;
+  top: -10%;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+
+#innerDiv {
+  border-radius: 7px;
+  width: 30vw;
+  height: 30vh;
+  padding: 30px 0 0px 0px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  animation: modalPop 0.2s ease-in 0s 1;
+}
+
+.text {
+  color: rgb(181, 54, 54);
+  font-size: 25px;
+}
+
+.buttonTextContent {
+  border-radius: 250px;
+  margin-top: 5%;
+  color: white;
+  background-color: rgb(243, 56, 56);
+  font-size: 30px;
+  width: 25%;
+  height: 20%;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+#closeBtn {
+  margin-left: 10%;
+}
+
+.textContent {
+  margin-top: 3%;
+}
+
+.input-box {
+  width: 72%;
+  height: 20%;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+#mainContainer {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 100px;
+  justify-content: center;
+  margin-right: 10%;
+  width: 90%;
+  /* margin-left: -400px; */
+}
+
+.cardContainer {
+  list-style: none;
+  display: none;
+  position: relative;
+  min-height: 350px;
+  min-width: 19%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3% 0 0 5%;
+  padding: 10px 0 0 0;
+  background: #eeeeee;
+  animation: cardAnimate 0.2s ease-in 0s 1;
+  align-content: center;
+}
+
+.cardHeader {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #c91b55;
+  cursor: pointer;
+}
+
+.list-element {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.buttonCard {
+  display: flex;
+  font-size: 30px;
+}
+
+.addButtonCard {
+  position: absolute;
+  bottom: 15px;
+  font-size: 25px;
+  margin-left: 15%;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(55, 55, 169);
+  background-color: white;
+}
+
+.deleteButtonCard {
+  position: absolute;
+  right: 50px;
+  bottom: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(211, 49, 49);
+  background-color: white;
+}
+
+.in-list-button {
+  cursor: pointer;
+}
+
+#mainDivContainer {
+  display: none;
+  position: fixed;
+  padding: 20% 0 0 30%;
+  text-align: center;
+  top: -10%;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+
+#innerDivContainer {
+  border-radius: 7px;
+  width: 30vw;
+  height: 28vh;
+  border: 1px solid rgb(165, 46, 46);
+  padding: 10px 0 0 0px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  animation: modalPop 0.2s ease-in 0s 1;
+}
+
+.this-list-element {
+  font-size: 20px;
+  font-weight: 700;
+  color: grey;
+  animation: cardTextAnimate 0.2s ease-in 0s 1;
+}
+
+#checkDone {
+  color: black;
+  background-color: grey;
+  display: none;
+}
+
+.markDoneClass {
+  background-color: rgb(77, 77, 228);
+  color: white;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3px 4px 4px 4px;
+}
+
+#backButton {
+  margin-left: 10%;
+  font-size: 40px;
+  display: none;
+}
+
+#backLogo {
+  z-index: 20;
+  font-size: 40px;
+  color: red;
+  cursor: pointer;
+}
+
+#cardHead {
+  justify-content: center;
+  font-size: 55px;
+  font-weight: 700;
+  color: red;
+  display: none;
+}
+
+#addPopUpCard {
+  position: relative;
+  top: 10vh;
+  margin-left: 10vw;
+  color: rgb(69, 206, 42);
+  font-size: 45px;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 290px) and (max-width: 580px) {
+  #task {
+    font-size: 30px;
+  }
+
+  #toDO {
+    font-size: 30px;
+  }
+
+  #noItem {
+    font-size: 25px;
+  }
+
+  #addButton {
+    z-index: 1;
+    position: absolute;
+    left: 47%;
+    top: 10%;
+    cursor: pointer;
+    color: rgb(106, 119, 235);
+  }
+
+  .addlists {
+    z-index: 1;
+    position: absolute;
+    font-size: 32px;
+    /* top:5%; */
+    left: 64%;
+    cursor: pointer;
+    color: black;
+  }
+
+  #mainContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 10%;
+    width: 90%;
+  }
+
+  .cardContainer {
+    border: 4px red solid;
+    list-style: none;
+    display: none;
+    position: relative;
+    top: 90px;
+    min-height: 350px;
+    min-width: 69%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 3% 0 0 5%;
+    padding: 10px 0 0 0;
+    background: #eeeeee;
+    animation: cardAnimate 0.2s ease-in 0s 1;
+  }
+
+  #innerDiv {
+    border-radius: 10px;
+    position: relative;
+    top: 300px;
+    right: 80px;
+    width: 85vw;
+    height: 25vh;
+    padding: 30px 0 0px 0px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    animation: modalPop 0.2s ease-in 0s 1;
+  }
+
+  #innerDivContainer {
+    border-radius: 10px;
+    position: relative;
+    top: 300px;
+    right: 80px;
+    width: 85vw;
+    height: 25vh;
+    padding: 30px 0 0px 0px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    animation: modalPop 0.2s ease-in 0s 1;
+  }
+
+  #cardHead {
+    justify-content: center;
+    position: relative;
+    top: 60px;
+    font-size: 55px;
+    font-weight: 700;
+    color: red;
+    display: none;
+  }
+
+  #backLogo {
+    z-index: 20;
+    font-size: 30px;
+    position: relative;
+    right: 20px;
+    color: red;
+    cursor: pointer;
+  }
+
+  #backButton {
+    font-size: 32px;
+    display: none;
+  }
+}
